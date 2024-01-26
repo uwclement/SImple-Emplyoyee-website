@@ -6,28 +6,84 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
+a {
+    text-decoration: none;
+  }
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+    z-index: -1; /* Place the image behind other content */
+    opacity:0.6; 
+}
+
+.header {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: #02111A
+  }
+  .nav,
+  .nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav_logo,
+  .nav_link,
+  .button {
+    color: #fff;
+  }
+  .nav_logo {
+    font-size: 15px;
+  }
+  .nav_item {
+    column-gap: 25px;
+  }
+  .nav_link:hover {
+    color: #d9d9d9;
+  }
+  .button {
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .button:active {
+    transform: scale(0.98);
+  }
 .container{
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#0D3956 ;
     column-gap: 30px;
     overflow: hidden;
 }
 .form{
     position: absolute;
-    max-width: 430px;
+    max-width: 435px;
     width: 100%;
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
+    margin-top:30px;
 }
 .form.signup{
     opacity: 0;
     pointer-events: none;
+    margin-top:60px;
+    overflow: hidden;
 }
 .forms.show-signup .form.signup{
     opacity: 1;
@@ -170,3 +226,6 @@ a.google span{
     }
     
 }
+
+
+
