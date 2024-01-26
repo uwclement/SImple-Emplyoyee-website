@@ -27,5 +27,5 @@ links.forEach(link => {
 })
 
 document.getElementById('form-open').addEventListener('click', function() {
-    window.location.href = 'login.html'; // Replace 'redirect-page.html' with the URL of your desired redirect page
+    window.location.href = 'login.html'; 
 });
