@@ -228,5 +228,30 @@ a.google span{
 
 {% comment %} home style {% endcomment %}
 .home-content{
-    background-color: white;
+    font-size:22px;
+    padding-top:160px;
+    background-color: transparent;
+    width:1200px;
+    height: auto;
+    margin:auto;
+    color:black;
+    position:relative;
 }
+p{
+    margin-top:10px;
+}
+.Rbutton {
+    padding: 6px 24px;
+    border:none;
+    background: #02111A;
+    border-radius: 6px;
+    margin-top:10px;
+    margin-left:30px;
+  }
+  .Rbutton a {
+    color:#fff;
+  }
+  .Rbutton:hover {
+    transform: scale(1.08);
+  }
+  {% comment %} employee page {% endcomment %}
