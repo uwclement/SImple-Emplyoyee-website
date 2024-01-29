@@ -29,3 +29,17 @@ links.forEach(link => {
 document.getElementById('form-open').addEventListener('click', function() {
     window.location.href = 'login.html'; 
 });
+function validateForm() {
+    var inputs = document.querySelectorAll('input[required]');
+    
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        
+        if (!input.checkValidity()) {
+            alert(input.title);
+            return false;
+        }
+    }
+
+    return true;
+}

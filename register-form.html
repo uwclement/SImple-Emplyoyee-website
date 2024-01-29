@@ -14,41 +14,52 @@
     <header class="header">
         <nav class="nav">
           <a href="home.html" class="nav_logo"> Welcome To WebTech</a>
-          <button class="button" id="form-open">Login</button>
+          <button type="button" class="button" id="form-open">
+            <a href="home.html"class="text-white" >Back</a>
+        </button>
         </nav>
+        
     </header>
         <div class="employee-form">
 
             <div class="title"> Employee Registration</div>
 
-            <form action="#" >
+            <form action="#" onsubmit="return validateForm()">
                 <div class="form first-form">
                     <div class="details personal-details">
                         <span class="subtitle">Personal Details</span>
             
                         <div class="fields">
                             <div class="input-field">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="Enter your name" required>
+                                <label class="fname">Full Name</label>
+                              <input type="text" placeholder="Enter your name" 
+                                required pattern="[A-Za-z\s]+" title="Please enter a valid name without numbers">
+
                             </div>
             
                             <div class="input-field">
                                 <label>Date of Birth</label>
-                                <input type="date" placeholder="Enter birth date" required>
+                                <input type="date" placeholder="Enter birth date" required max="2000-01-01" title=" You are Young">                                
                             </div>
             
                             <div class="input-field">
-                                <label>Email</label>
-                                <input type="text" placeholder="Enter your email" required>
+                                <label class="fname">Email</label>
+                                <input type="email" placeholder="Enter your email" r
+                                equired pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                title="Enter a Valid Email">
+                                
                             </div>
             
                             <div class="input-field">
                                 <label>Mobile Number</label>
-                                <input type="number" placeholder="Enter mobile number" required>
+                                <input type="tel" placeholder="Enter mobile number" 
+                                required pattern="[0-9]{10}"
+                                title="Enter Valid phone number (10 Digits)">
+
                             </div>
             
                             <div class="input-field">
-                                <label>Gender</label>
+                                <label class="fname">Gender</label>
                                 <select required>
                                     <option disabled selected>Select gender</option>
                                     <option>Male</option>
@@ -69,7 +80,7 @@
             
                         <div class="fields">
                             <div class="input-field">
-                                <label>ID Type</label>
+                                <label class="fname">ID Type</label>
                                 <input type="text" placeholder="Enter ID type" required>
                             </div>
             
@@ -94,13 +105,13 @@
                             </div>
             
                             <div class="input-field">
-                                <label>Expiry Date</label>
-                                <input type="date" placeholder="Enter expiry date" required>
+                                <label class="fname">Expiry Date</label>
+                                <input type="date" placeholder="Expiry date" required>
                             </div>
                         </div>
             
                         <button class="next-button">
-                            <span class="button-text">Next</span>
+                            <span class="button-text">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div>
